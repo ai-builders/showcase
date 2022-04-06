@@ -30,7 +30,7 @@ const Navbar = () => {
       alignItems="center"
     >
       <Container maxW="container.lg" position="relative">
-        <Flex w="100%" alignItems="center" justifyContent="center">
+        <Flex w="100%" height={20} alignItems="center" justifyContent="center">
           <NextLink href="/" passHref>
             <Link _focus={{ outline: "none" }}>
               <Image
@@ -56,7 +56,7 @@ const Navbar = () => {
           <Collapse in={isOpenAbout} animateOpacity>
             <Box
               position="absolute"
-              top={14}
+              top={16}
               right={0}
               maxW="lg"
               bg="purple.100"
