@@ -1,0 +1,64 @@
+import { readFileSync } from "fs";
+import { glob } from "glob";
+import matter from "gray-matter";
+import path from "path";
+
+interface MatterResultData {
+  title: string;
+  date: string;
+  demo: string;
+  github: string;
+  kaggle: string;
+  youtube: string;
+  video: string;
+  external_post_link: string;
+  builder: string;
+  builder_info: string;
+}
+
+export interface PostData extends MatterResultData {
+  id: string;
+}
+
+const postsDirectory = path.join(process.cwd(), "posts");
+
+export function getAllPostIds() {
+  const fileNames = glob.sync(`${postsDirectory}/**/*.md`);
+
+  // returns an array that looks like this:
+  // [
+  //   {
+  //     params: {
+  //       year: '2021',
+  //       id: '001-foody-dudy'
+  //     },
+  //     ...
+  //   },
+  // ]
+  return fileNames.map((fileName) => {
+    const [year, id] = fileName.split("/").slice(-2);
+
+    console.log({ fileName });
+
+    return {
+      params: {
+        year,
+        id: id.replace(/\.md$/, ""),
+      },
+    };
+  });
+}
+
+export function getPostData(year: string, id: string): PostData {
+  const fullPath = path.join(postsDirectory, year, `${id}.md`);
+  const fileContents = readFileSync(fullPath, "utf8");
+
+  // use gray-matter to parse the post metadata section
+  const matterResult = matter(fileContents);
+
+  // combine the data with the id
+  return {
+    id,
+    ...(matterResult.data as MatterResultData),
+  };
+}
