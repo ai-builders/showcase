@@ -49,6 +49,38 @@ export function getAllPostIds() {
   });
 }
 
+export function getPostList() {
+  const fileNames = glob.sync(`${postsDirectory}/**/*.md`);
+
+  const postList = fileNames.map((fileName) => {
+    const [year, id] = fileName.split("/").slice(-2);
+    const filePath = path.join(postsDirectory, year, id);
+    const fileContents = readFileSync(filePath, "utf8");
+
+    const matterResult = matter(fileContents);
+
+    return {
+      year,
+      id: id.replace(/\.md$/, ""),
+      ...(matterResult.data as MatterResultData),
+    };
+  });
+
+  // group by year before returning
+  const groupedByYear = postList.reduce(
+    (acc: { [index: string]: any }, cur) => {
+      if (!acc[cur.year]) {
+        return { ...acc, [cur.year]: [cur] };
+      }
+
+      return { ...acc, [cur.year]: [...acc[cur.year], cur] };
+    },
+    {}
+  );
+
+  return groupedByYear;
+}
+
 export function getPostData(year: string, id: string): PostData {
   const fullPath = path.join(postsDirectory, year, `${id}.md`);
   const fileContents = readFileSync(fullPath, "utf8");
