@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
       color="gray.600"
     >
       <Navbar />
-      <Container maxW="container.lg">{children}</Container>
+      <Container maxW="container.xl">{children}</Container>
       <Spacer />
     </Flex>
   );

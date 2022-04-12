@@ -1,53 +1,93 @@
-import { Box, Flex, Grid, Image, SimpleGrid } from "@chakra-ui/react";
-import type { NextPage } from "next";
-import { ReactNode } from "react";
+import { Box, Grid, Image, Text } from "@chakra-ui/react";
 
 interface PostData {
-  builder: string;
-  builder_info: string;
   date: string;
-  demo: string;
-  external_post_link: string;
-  github: string;
-  id: string;
-  kaggle: string;
-  thumbnail: string;
   title: string;
-  video: string;
+  builder: string;
+  builder_info?: string;
+  thumbnail: string;
+  links?: {
+    github?: string;
+    facebook?: string;
+    blog?: string;
+  };
+  id: string;
   year: string;
-  youtube: string;
 }
 
 interface ShowcaseProps {
   data: PostData[];
 }
 
-const DummyBox = ({ children }: { children?: ReactNode }) => (
-  <Box w="100%" h={{ base: "200px", md: "160px" }} backgroundColor="purple.300">
-    {children}
-  </Box>
-);
+interface ShowcaseItemProps {
+  title: string;
+  builder: string;
+  thumbnail: string;
+}
+
+const ShowcaseItem = ({ title, builder, thumbnail }: ShowcaseItemProps) => {
+  return (
+    <Box
+      backgroundColor="purple.300"
+      borderRadius="lg"
+      overflow="hidden"
+      boxShadow="lg"
+      cursor="pointer"
+      borderWidth={1}
+      borderStyle="solid"
+      borderColor="gray.100"
+      _hover={{
+        transform: "scale(1.05)",
+        transition: "transform 0.2s",
+      }}
+    >
+      <Box w="100%" h="200px">
+        <Image
+          objectFit="cover"
+          src={thumbnail}
+          w="100%"
+          h="100%"
+          alt={title}
+        />
+      </Box>
+
+      <Box
+        color="gray.50"
+        fontWeight="bold"
+        fontSize="90%"
+        w="100%"
+        h="62.5px"
+        backgroundColor="blackAlpha.300"
+        px={4}
+        py={2}
+      >
+        <Box>
+          <Text isTruncated>{title}</Text>
+          <Text isTruncated>{builder}</Text>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
 
 const ShowCase = ({ data }: ShowcaseProps) => {
-  const { thumbnail } = data[0];
-
   return (
     <Grid
       templateColumns={{
         base: "repeat(1, 1fr)",
-        sm: "repeat(2, 1fr)",
-        md: "repeat(3, 1fr)",
-        lg: "repeat(4, 1fr)",
+        md: "repeat(2, 1fr)",
+        lg: "repeat(3, 1fr)",
       }}
       gap={4}
     >
-      <DummyBox>
-        <Image src={thumbnail} w="100%" h="100%" />
-      </DummyBox>
-      <DummyBox />
-      {/* <DummyBox />
-      <DummyBox />
-      <DummyBox /> */}
+      {data.map(({ id, title, builder, thumbnail }) => (
+        <ShowcaseItem
+          key={id}
+          title={title}
+          builder={builder}
+          thumbnail={thumbnail}
+        />
+      ))}
     </Grid>
   );
 };

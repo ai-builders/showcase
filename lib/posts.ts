@@ -4,16 +4,16 @@ import matter from "gray-matter";
 import path from "path";
 
 interface MatterResultData {
-  title: string;
   date: string;
-  demo: string;
-  github: string;
-  kaggle: string;
-  youtube: string;
-  video: string;
-  external_post_link: string;
+  title: string;
   builder: string;
-  builder_info: string;
+  builder_info?: string;
+  thumbnail: string;
+  links?: {
+    github?: string;
+    facebook?: string;
+    blog?: string;
+  };
 }
 
 export interface PostData extends MatterResultData {
@@ -37,8 +37,6 @@ export function getAllPostIds() {
   // ]
   return fileNames.map((fileName) => {
     const [year, id] = fileName.split("/").slice(-2);
-
-    console.log({ fileName });
 
     return {
       params: {
