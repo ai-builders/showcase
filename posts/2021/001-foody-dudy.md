@@ -1,15 +1,13 @@
 ---
-title: "FoodyDudy"
 date: "2021-07-04"
-demo: "https://foodydudy.herokuapp.com/"
-github: "https://github.com/GemmyTheGeek/FoodyDudy"
-kaggle: "https://www.kaggle.com/somboonthamgemmy/foodydudy"
-youtube: "https://www.youtube.com/channel/UC1-Rj1CaGrltQfzFbHz0hdw"
-video: "https://youtu.be/d3Q-8VySAV8"
-external_post_link: "https://bit.ly/2UkrtST"
+title: "FoodyDudy"
 builder: "Phacharaphol Somboontham (Gemmy)"
 builder_info: "ประถมศึกษาปีที่ 6 / เชียงใหม่"
-thumbnail: "/images/2021/foody-dudy/1.png"
+thumbnail: "/images/2021/001/1.png"
+links:
+  github: "https://github.com/GemmyTheGeek/FoodyDudy"
+  facebook: "https://www.facebook.com/aibuildersx/posts/165448438956937"
+  blog: "https://bit.ly/2UkrtST"
 ---
 
 ## Showcase Series #1
