@@ -9,7 +9,8 @@ const nextConfig = {
     // No easy fix for NPM so I skipped this for now.
     // !! WARN !!
     ignoreBuildErrors: true,
-  }
+  },
+  basePath: '/showcase',
 }
 
 module.exports = nextConfig
