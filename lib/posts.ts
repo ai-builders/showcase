@@ -1,7 +1,7 @@
-import { readFileSync } from "fs";
-import { glob } from "glob";
-import matter from "gray-matter";
-import path from "path";
+import { readFileSync } from 'fs';
+import { glob } from 'glob';
+import matter from 'gray-matter';
+import path from 'path';
 
 interface MatterResultData {
   date: string;
@@ -18,9 +18,10 @@ interface MatterResultData {
 
 export interface PostData extends MatterResultData {
   id: string;
+  content: string;
 }
 
-const postsDirectory = path.join(process.cwd(), "posts");
+const postsDirectory = path.join(process.cwd(), 'posts');
 
 export function getAllPostIds() {
   const fileNames = glob.sync(`${postsDirectory}/**/*.md`);
@@ -36,12 +37,12 @@ export function getAllPostIds() {
   //   },
   // ]
   return fileNames.map((fileName) => {
-    const [year, id] = fileName.split("/").slice(-2);
+    const [year, id] = fileName.split('/').slice(-2);
 
     return {
       params: {
         year,
-        id: id.replace(/\.md$/, ""),
+        id: id.replace(/\.md$/, ''),
       },
     };
   });
@@ -51,15 +52,15 @@ export function getPostList() {
   const fileNames = glob.sync(`${postsDirectory}/**/*.md`);
 
   const postList = fileNames.map((fileName) => {
-    const [year, id] = fileName.split("/").slice(-2);
+    const [year, id] = fileName.split('/').slice(-2);
     const filePath = path.join(postsDirectory, year, id);
-    const fileContents = readFileSync(filePath, "utf8");
+    const fileContents = readFileSync(filePath, 'utf8');
 
     const matterResult = matter(fileContents);
 
     return {
       year,
-      id: id.replace(/\.md$/, ""),
+      id: id.replace(/\.md$/, ''),
       ...(matterResult.data as MatterResultData),
     };
   });
@@ -79,9 +80,9 @@ export function getPostList() {
   return groupedByYear;
 }
 
-export function getPostData(year: string, id: string): PostData {
+export async function getPostData(year: string, id: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, year, `${id}.md`);
-  const fileContents = readFileSync(fullPath, "utf8");
+  const fileContents = readFileSync(fullPath, 'utf8');
 
   // use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
@@ -89,6 +90,7 @@ export function getPostData(year: string, id: string): PostData {
   // combine the data with the id
   return {
     id,
+    content: matterResult.content,
     ...(matterResult.data as MatterResultData),
   };
 }
