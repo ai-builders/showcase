@@ -1,5 +1,5 @@
-import { Box, Grid, Image, Link, Text } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Box, Grid, Image, Link, Text } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 interface PostData {
   date: string;
@@ -43,12 +43,12 @@ const ShowcaseItem = ({
       borderStyle="solid"
       borderColor="gray.100"
       _hover={{
-        transform: "scale(1.05)",
-        transition: "transform 0.2s",
+        transform: 'scale(1.05)',
+        transition: 'transform 0.2s',
       }}
     >
       <NextLink href={uri} passHref>
-        <Link>
+        <Link _hover={{ textDecoration: 'none' }}>
           <Box w="100%" h="200px">
             <Image
               objectFit="cover"
@@ -84,9 +84,9 @@ const ShowCase = ({ data }: ShowcaseProps) => {
   return (
     <Grid
       templateColumns={{
-        base: "repeat(1, 1fr)",
-        md: "repeat(2, 1fr)",
-        lg: "repeat(3, 1fr)",
+        base: 'repeat(1, 1fr)',
+        md: 'repeat(2, 1fr)',
+        lg: 'repeat(3, 1fr)',
       }}
       gap={4}
     >
