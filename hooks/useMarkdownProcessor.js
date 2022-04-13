@@ -23,6 +23,7 @@ const ImageRenderer = (props) => {
         overflow="hidden"
         alt={props.alt}
         {...props}
+        src={`/showcase${props.src}`}
       />
     </Flex>
   );

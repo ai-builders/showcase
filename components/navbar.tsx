@@ -9,8 +9,8 @@ import {
   Spacer,
   Text,
   useDisclosure,
-} from "@chakra-ui/react";
-import NextLink from "next/link";
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 const Navbar = () => {
   const {
@@ -32,10 +32,10 @@ const Navbar = () => {
       <Container maxW="container.lg" position="relative">
         <Flex w="100%" height={20} alignItems="center" justifyContent="center">
           <NextLink href="/" passHref>
-            <Link _focus={{ outline: "none" }}>
+            <Link _focus={{ outline: 'none' }}>
               <Image
                 height={14}
-                src="/favicon/apple-touch-icon.png"
+                src="/showcase/favicon/apple-touch-icon.png"
                 alt="AI Builders Logo"
               />
             </Link>

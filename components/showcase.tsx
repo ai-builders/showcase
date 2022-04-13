@@ -52,7 +52,7 @@ const ShowcaseItem = ({
           <Box w="100%" h="200px">
             <Image
               objectFit="cover"
-              src={thumbnail}
+              src={`/showcase${thumbnail}`}
               w="100%"
               h="100%"
               alt={title}
