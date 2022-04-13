@@ -1,4 +1,5 @@
-import { Box, Grid, Image, Text } from "@chakra-ui/react";
+import { Box, Grid, Image, Link, Text } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 interface PostData {
   date: string;
@@ -23,16 +24,21 @@ interface ShowcaseItemProps {
   title: string;
   builder: string;
   thumbnail: string;
+  uri: string;
 }
 
-const ShowcaseItem = ({ title, builder, thumbnail }: ShowcaseItemProps) => {
+const ShowcaseItem = ({
+  title,
+  builder,
+  thumbnail,
+  uri,
+}: ShowcaseItemProps) => {
   return (
     <Box
       backgroundColor="purple.300"
       borderRadius="lg"
       overflow="hidden"
       boxShadow="lg"
-      cursor="pointer"
       borderWidth={1}
       borderStyle="solid"
       borderColor="gray.100"
@@ -41,31 +47,35 @@ const ShowcaseItem = ({ title, builder, thumbnail }: ShowcaseItemProps) => {
         transition: "transform 0.2s",
       }}
     >
-      <Box w="100%" h="200px">
-        <Image
-          objectFit="cover"
-          src={thumbnail}
-          w="100%"
-          h="100%"
-          alt={title}
-        />
-      </Box>
+      <NextLink href={uri} passHref>
+        <Link>
+          <Box w="100%" h="200px">
+            <Image
+              objectFit="cover"
+              src={thumbnail}
+              w="100%"
+              h="100%"
+              alt={title}
+            />
+          </Box>
 
-      <Box
-        color="gray.50"
-        fontWeight="bold"
-        fontSize="90%"
-        w="100%"
-        h="62.5px"
-        backgroundColor="blackAlpha.300"
-        px={4}
-        py={2}
-      >
-        <Box>
-          <Text isTruncated>{title}</Text>
-          <Text isTruncated>{builder}</Text>
-        </Box>
-      </Box>
+          <Box
+            color="gray.50"
+            fontWeight="bold"
+            fontSize="90%"
+            w="100%"
+            h="62.5px"
+            backgroundColor="blackAlpha.300"
+            px={4}
+            py={2}
+          >
+            <Box>
+              <Text isTruncated>{title}</Text>
+              <Text isTruncated>{builder}</Text>
+            </Box>
+          </Box>
+        </Link>
+      </NextLink>
     </Box>
   );
 };
@@ -80,12 +90,13 @@ const ShowCase = ({ data }: ShowcaseProps) => {
       }}
       gap={4}
     >
-      {data.map(({ id, title, builder, thumbnail }) => (
+      {data.map(({ id, year, title, builder, thumbnail }) => (
         <ShowcaseItem
           key={id}
           title={title}
           builder={builder}
           thumbnail={thumbnail}
+          uri={`/posts/${year}/${id}`}
         />
       ))}
     </Grid>
