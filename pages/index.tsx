@@ -7,11 +7,11 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
-} from "@chakra-ui/react";
-import type { GetStaticProps, InferGetServerSidePropsType } from "next";
-import Layout from "../components/layout";
-import ShowCase from "../components/showcase";
-import { getPostList } from "../lib/posts";
+} from '@chakra-ui/react';
+import type { GetStaticProps, InferGetServerSidePropsType } from 'next';
+import Layout from '../components/layout';
+import ShowCase from '../components/showcase';
+import { getPostList } from '../lib/posts';
 
 export const getStaticProps: GetStaticProps = async () => {
   const postList = getPostList();
@@ -27,7 +27,6 @@ const Home = ({
   postList,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const years = Object.keys(postList);
-  console.log({ years });
 
   return (
     <Layout>
