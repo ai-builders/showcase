@@ -1,33 +1,57 @@
-import { Code, Heading, Text, VStack } from "@chakra-ui/react";
-import type { NextPage } from "next";
-import styled from "styled-components";
+import {
+  Box,
+  Flex,
+  Heading,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+} from '@chakra-ui/react';
+import type { GetStaticProps, InferGetServerSidePropsType } from 'next';
+import Layout from '../components/layout';
+import ShowCase from '../components/showcase';
+import { getPostList } from '../lib/posts';
 
-const StyledBox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const getStaticProps: GetStaticProps = async () => {
+  const postList = getPostList();
 
-  width: 320px;
+  return {
+    props: {
+      postList,
+    },
+  };
+};
 
-  border: 3px dashed palevioletred;
-  border-radius: 10px;
+const Home = ({
+  postList,
+}: InferGetServerSidePropsType<typeof getStaticProps>) => {
+  const years = Object.keys(postList);
 
-  padding: 1.25em;
-`;
-
-const Home: NextPage = () => {
   return (
-    <VStack direction="column" gap={2} py={8}>
-      <Heading as="h1"> Bluenex Storybook</Heading>
-      <Text as="p">
-        Check <Code>README.md</Code>!
-      </Text>
-      <StyledBox>
-        <Text as="p" textAlign="center">
-          This box is created with styled-components
-        </Text>
-      </StyledBox>
-    </VStack>
+    <Layout>
+      <Box textAlign="center" py={6}>
+        <Heading as="h1" mb={6}>
+          AI Builders Showcase
+        </Heading>
+        <Tabs variant="soft-rounded" colorScheme="purple">
+          <Flex justifyContent="center" mb={6}>
+            <TabList gap={4}>
+              {years.map((year) => (
+                <Tab key={year}>{year}</Tab>
+              ))}
+            </TabList>
+          </Flex>
+          <TabPanels>
+            {years.map((year) => (
+              <TabPanel key={year}>
+                <ShowCase data={postList[year]} />
+              </TabPanel>
+            ))}
+          </TabPanels>
+        </Tabs>
+      </Box>
+    </Layout>
   );
 };
 

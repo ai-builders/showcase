@@ -1,46 +1,52 @@
-# bluenex-storybook
+# AI Builders Showcase
 
-This is a repository to keep potentially reusable components that I have implemented. I have no skill in design at all so some of them might be dull. Also, it may or may not follow the best practice, but consistency will be my priority.
-
-I personally enjoy writing components with styled-components. However, I discovered Chakra UI recently and think it provides an intuitive styled system that helps me a lot. So I am personally attached to these 2 libraries and so that I include them in the storybook.
-
-This repository can also be used as a template for a new project with Next.js + TypeScript + Chakra UI.
+A showcase website for AI Builders.
 
 ## Requirements
 
-- Node 16+
-
-## Stacks
-
-- Next.js + TypeScript
-- Chakra UI
-
-## Create a new project
-
-To create a new project from this template, run the following command:
-
-```sh
-npx create-next-app -e https://github.com/bluenex/bluenex-storybook
-
-# optional, cleanup components and stories
-cd scripts
-./new-proj-cleanup.sh
-```
-
-## Update favicon
-
-Get an icon file (prefer .SVG) and uses that file to generate favicons from this website https://realfavicongenerator.net/. The path to keep favicon is `public/favicon` and the path to refer to favicon files is `/favicon`.
+- Node 16+ (with NPM 7+)
 
 ## Dev
 
-To run the development server for Next.js:
+To run the app in your local
 
 ```sh
+# first time only
+npm install
+
 npm run dev
 ```
 
-For storybook please check [its README](./stories/README.md).
+## Add a showcase
 
-## Deployment
+Create a markdown file in `posts/{year}` with the name of `{number}-{title-in-kebab-case}.md`. The most important part in the file is the [Front Matter](https://jekyllrb.com/docs/front-matter/), an example is shown below.
 
-The Storybook is deployed on Vercel and can be redirected from my personal website https://bluenex.dev/storybook.
+```txt
+---
+date: "2021-07-04"
+title: "FoodyDudy"
+builder: "Phacharaphol Somboontham (Gemmy)"
+builder_info: "ประถมศึกษาปีที่ 6 / เชียงใหม่"
+thumbnail: "/images/2021/001/1.png"
+links:
+  github: "https://github.com/GemmyTheGeek/FoodyDudy"
+  facebook: "https://www.facebook.com/aibuildersx/posts/165448438956937"
+  blog: "https://bit.ly/2UkrtST"
+---
+```
+
+`date`, `title`, `builder`, `builder_info`, `thumbnail` and `links` are required. For `github`, `facebook` and `blog`, you can omit the field or add empty string `""` and add it later if it is not available at the time.
+
+### Add images
+
+You can add images for each showcase in `public/images/{year}/{showcase-number}` folder. Images should be `JPEG`, `JPG` or `PNG` format.
+
+To add image in the showcase markdown file, use the following syntax:
+
+```txt
+![Alternate Text](/images/{year}/{showcase-number}/{image-name}.png)
+```
+
+## Report issue
+
+If you find that the showcase is not rendered properly, please report it on [Github Issues](https://github.com/ai-builders/showcase/issues).
