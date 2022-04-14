@@ -1,12 +1,10 @@
 import {
   Box,
   Button,
-  Collapse,
   Container,
   Flex,
   Image,
   Link,
-  Spacer,
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
@@ -53,7 +51,7 @@ const Navbar = () => {
             เกี่ยวกับเรา
           </Button>
 
-          <Collapse in={isOpenAbout} animateOpacity>
+          {isOpenAbout && (
             <Box
               position="absolute"
               top={16}
@@ -63,6 +61,7 @@ const Navbar = () => {
               rounded="md"
               shadow="md"
               p={6}
+              zIndex={10}
             >
               <Text as="p" fontSize={18}>
                 โครงการ AI Builders ก่อตั้งขึ้นจากความร่วมมือระหว่าง VISTEC / AI
@@ -73,7 +72,7 @@ const Navbar = () => {
                 ที่สนใจอยากเรียนรู้และพัฒนาโครงงานที่ใช้ทักษะในด้านนี้เพื่อประยุกต์ใช้จริงในชีวิตประจำวัน
               </Text>
             </Box>
-          </Collapse>
+          )}
         </Flex>
       </Container>
     </Flex>

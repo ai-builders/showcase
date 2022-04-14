@@ -1,5 +1,6 @@
-import { Container, Flex, Spacer } from "@chakra-ui/react";
-import Navbar from "./navbar";
+import { Container, Flex, Spacer } from '@chakra-ui/react';
+import Footer from './footer';
+import Navbar from './navbar';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,6 +17,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Navbar />
       <Container maxW="container.xl">{children}</Container>
       <Spacer />
+      <Footer />
     </Flex>
   );
 };
