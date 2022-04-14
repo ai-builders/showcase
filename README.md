@@ -47,6 +47,24 @@ To add image in the showcase markdown file, use the following syntax:
 ![Alternate Text](/images/{year}/{showcase-number}/{image-name}.png)
 ```
 
+## Social sharing
+
+Open Graph tags are implemented so that when you share the URL, the title, description and image will be automatically populated.
+
+For each showcase, the image will be the thumbnail of the showcase.
+
+For main page (https://ai-builders.github.io/showcase/), you can change the image by placing the new image in `public/og` folder. Then changes the image path in `components/seo.tsx` to the new image path.
+
+```diff
+const fallbacks = {
+  title: 'AI Builders',
+  description: 'A program for kids who want to build good AI',
+- image: '/og/14-04-2022.jpeg',
++ image: '/og/{new-image-path}',
+  url: 'https://www.facebook.com/aibuildersx',
+};
+```
+
 ## Report issue
 
 If you find that the showcase is not rendered properly, please report it on [Github Issues](https://github.com/ai-builders/showcase/issues).
