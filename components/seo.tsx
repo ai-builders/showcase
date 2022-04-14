@@ -7,11 +7,11 @@ interface SEOProps {
   url?: string | undefined | null;
 }
 
-const BASE_URL = 'https://ai-builders.github.io';
+const BASE_URL = 'https://ai-builders.github.io/showcase';
 const fallbacks = {
   title: 'AI Builders',
   description: 'A program for kids who want to build good AI',
-  image: '/showcase/og/14-04-2022.jpeg',
+  image: '/og/14-04-2022.jpeg',
   url: 'https://www.facebook.com/aibuildersx',
 };
 
