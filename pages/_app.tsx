@@ -2,6 +2,7 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '@fontsource/bai-jamjuree';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import SEO from '../components/seo';
 import '../styles/globals.css';
 
 const theme = extendTheme({
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-config" content="/showcase/favicon/browserconfig.xml" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
+      <SEO />
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>

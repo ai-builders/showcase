@@ -12,9 +12,9 @@ import type {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import { useEffect } from 'react';
 import { FaFacebook, FaGithub, FaPenAlt } from 'react-icons/fa';
 import Layout from '../../../components/layout';
+import SEO from '../../../components/seo';
 import useMarkdownProcessor from '../../../hooks/useMarkdownProcessor';
 import { getAllPostIds, getPostData, PostData } from '../../../lib/posts';
 
@@ -36,11 +36,16 @@ const buttonMap: { [index: string]: any } = {
 const Post: NextPage = ({
   postData,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { title, content, builder, builder_info, links } = postData;
+  const { title, content, builder, builder_info, links, thumbnail } = postData;
   const reactContent = useMarkdownProcessor(content);
 
   return (
     <Layout>
+      <SEO
+        title={title}
+        description={`${builder} • ${builder_info}`}
+        image={thumbnail}
+      />
       <Box pt={6} pb={12}>
         <Container maxW="container.lg">
           <Box textAlign="center" mb={6}>
