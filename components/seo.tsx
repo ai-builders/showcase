@@ -9,8 +9,8 @@ interface SEOProps {
 
 const BASE_URL = 'https://ai-builders.github.io/showcase';
 const fallbacks = {
-  title: 'AI Builders',
-  description: 'A program for kids who want to build good AI',
+  title: 'AI Builders Showcase',
+  description: 'Showcase of previous AI Builders projects',
   image: '/og/14-04-2022.jpeg',
   url: 'https://www.facebook.com/aibuildersx',
 };
