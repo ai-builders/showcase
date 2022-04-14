@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
 
 interface SEOProps {
   title?: string | undefined | null;
@@ -8,6 +7,7 @@ interface SEOProps {
   url?: string | undefined | null;
 }
 
+const BASE_URL = 'https://ai-builders.github.io';
 const fallbacks = {
   title: 'AI Builders',
   description: 'A program for kids who want to build good AI',
@@ -16,21 +16,10 @@ const fallbacks = {
 };
 
 const SEO = ({ title, description, image }: SEOProps) => {
-  const [url, setUrl] = useState<string | undefined | null>(null);
-  const [originUrl, setOriginUrl] = useState<string | undefined | null>(null);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setUrl(window.location.href);
-      setOriginUrl(window.location.origin);
-    }
-  }, []);
-
   return (
     <Head>
       <title>{title || fallbacks.title}</title>
       <meta name="twitter:card" content="summary" key="twcard" />
-      <meta property="og:url" content={url || fallbacks.url} key="ogurl" />
       <meta
         property="og:title"
         content={title || fallbacks.title}
@@ -43,7 +32,7 @@ const SEO = ({ title, description, image }: SEOProps) => {
       />
       <meta
         property="og:image"
-        content={`${originUrl}${image || fallbacks.image}`}
+        content={`${BASE_URL}${image || fallbacks.image}`}
         key="ogimage"
       />
       <meta
