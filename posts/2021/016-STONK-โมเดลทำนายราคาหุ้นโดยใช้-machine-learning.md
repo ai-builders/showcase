@@ -10,7 +10,7 @@ links:
   blog: "https://sodayeet.medium.com/lstm-embedding-model-for-predicting-stock-price-and-how-to-improve-it-4954a44582c4"
 ---
 
-![Kanoon](images/2021/016/01.jpg)
+![Kanoon](/images/2021/016/01.jpg)
 
 - ทำการดึงข้อมูลจาก yahoo finance มาโดยหุ้นมี่ใช้เป็นตัวอย่างคือ KBANK 
 - preprocess ข้อมูลที่ได้รับมาโดยการ ตัด row ที่ไม่มีข้อมูลออกไปและคำนวณค่า  pct change, SMA20 และ T3 indicator เพิ่มเข้าไปในชุดข้อมูลแล้วตัด column “Close” ออก
@@ -20,10 +20,10 @@ links:
 - นำ output ของโมเดลมาคำนวณเป็น ราคาของ 1 วันข้างหน้าเพื่อแสดงเป็นรูปแบบ graph และตาราง
 - จากการ evaluate โดยใช้ test set ที่โมเดลไม่เคยเห็นมาก่อน จะได้ MSE loss อยู่ที่ประมาณ 5.42 และจากการใช้ confusion matrix โดยวัดจากจำนวนครั้งที่โมเดลทายถูกว่าราคาจะขึ้น จะได้ average precision อยู่ที่ 50%
 
-![Data](images/2021/016/02.png)
+![Data](/images/2021/016/02.png)
 
 
-![Results](images/2021/016/03.png)
+![Results](/images/2021/016/03.png)
 
 
 ### แรงจูงใจในการเข้าร่วมโครงการ (จากใบสมัครเข้าร่วมเมื่อ 9 สัปดาห์ที่แล้ว)
