@@ -10,7 +10,7 @@ links:
   blog: "https://bit.ly/3jHNuWu"
 ---
 
-![Prim](images/2021/005/01.png)
+![Prim](/images/2021/005/01.png)
 
 - โมเดล Text-to-speech ภาษาไทย open source
 - เทรนด้วย dataset TSync2 (AI for Thai ของ NECTEC) จำนวนทั้งหมด 5 ชั่วโมง
@@ -21,13 +21,13 @@ links:
 - ได้เทรน model ไปจำนวนทั้งหมด 10,000 steps
 - วัดผลด้วย mean opinion score ได้คะแนน 3.13 +- 1.12 โดยเสียงมนุษย์ได้อยู่ที่ 4.3
 
-![Model Architecture](images/2021/005/02.png)
+![Model Architecture](/images/2021/005/02.png)
 
 
-![Experiment Steps](images/2021/005/03.png)
+![Experiment Steps](/images/2021/005/03.png)
 
 
-![Results](images/2021/005/04.png)
+![Results](/images/2021/005/04.png)
 
 
 ### แรงจูงใจในการเข้าร่วมโครงการ (จากใบสมัครเข้าร่วมเมื่อ 9 สัปดาห์ที่แล้ว)

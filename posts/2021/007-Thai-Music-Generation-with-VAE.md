@@ -18,7 +18,7 @@ links:
 - ได้ทดลองรูปแบบสถาปัตยกรรมโมเดลทั้งหมดสามแบบ โดยแต่ละแบบจะเป็น CNN based model
 - train โมเดลด้วยการให้โมเดลเรียนที่จะสร้าง spectrogram ขึ้นมาจาก latent space
 - ทำการวัดผลโมเดลตัวเองด้วย Mean Opinion Score (MOS) ได้ผลลัพท์ดีที่สุดอยู่ที่ 3.56 (เต็ม 5)
-- สามารถเล่น demo app ได้ที่ทาง [heroku app](https://rew-thai-music-generation.herokuapp.com/)
+- สามารถเล่น demo app ได้ทีทาง [heroku app](https://rew-thai-music-generation.herokuapp.com/)
 
 ![Generation example](/images/2021/007/01.jpg)
 

@@ -10,7 +10,7 @@ links:
   blog: "https://bit.ly/3hhVZWL"
 ---
 
-![Looktarn](images/2021/003/01.jpg)
+![Looktarn](/images/2021/003/01.jpg)
 
 - โมเดลแปลภาษาจีน-ไทยและไทย-จีน open source ที่มีประสิทธิภาพ 60-70% ของ Google Translate และดีกว่า AIforThai (xiaofan) ของ NECTEC อย่างน้อย 1 เท่าตัวในทุกทิศทางการแปล
 - สร้างขึ้นเพื่อตอบโจทย์ปัญหาการเจรจาธุรกิจกับบริษัทจีนของที่บ้าน รวมถึงตัวน้องลูกตาลเองก็สามารถสื่อสารภาษาจีนได้ในระดับดีมาก ทำให้มองเห็นช่องว่างของการแปลภาษาจากบริการแปลภาษาไทย-จีนทั่วไป
@@ -33,13 +33,13 @@ links:
 - อย่าลืมติดตามช่อง YouTube ของน้องลูกตาลได้ที่ MakeCode for Kids [https://www.youtube.com/channel/UC_N5_4YR3tPwoPMoQ2BTndQ](https://www.youtube.com/channel/UC_N5_4YR3tPwoPMoQ2BTndQ) หรือ FB Page [https://www.facebook.com/makecodeforkid](https://www.facebook.com/makecodeforkid)
 - น้องลูกตาลยังทำ MakeCode for Kids เป็น Facebook Page  [https://www.facebook.com/makecodeforkid](https://www.facebook.com/makecodeforkid) และ Youtube Channel [https://www.youtube.com/channel/UC_N5_4YR3tPwoPMoQ2BTndQ](https://www.youtube.com/channel/UC_N5_4YR3tPwoPMoQ2BTndQ) สำหรับน้องๆ ชั้นประถมหรือผู้ปกครองที่สนใจการเขียนโปรแกรมและปัญญาประดิษฐ์ ผู้ที่สนใจสามารถไปติดตามกันได้ น้องลูกตาลฝากมาบอกว่ามีคำถามอะไรก็ถามได้เลยครับ
 
-![Project Results](images/2021/003/02.jpg)
+![Project Results](/images/2021/003/02.jpg)
 
 
-![Results Comparison](images/2021/003/03.jpg)
+![Results Comparison](/images/2021/003/03.jpg)
 
 
-![Hugging Face Deployment](images/2021/003/04.jpg)
+![Hugging Face Deployment](/images/2021/003/04.jpg)
 
 
 ### แรงจูงใจในการเข้าร่วมโครงการ (จากใบสมัครเข้าร่วมเมื่อ 9 สัปดาห์ที่แล้ว)

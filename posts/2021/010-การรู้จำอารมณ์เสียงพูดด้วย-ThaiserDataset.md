@@ -10,7 +10,7 @@ links:
   blog: "https://bit.ly/3hi83Hi"
 ---
 
-![Oak](images/2021/010/01.jpg)
+![Oak](/images/2021/010/01.jpg)
 
 - ทำการทดลอง Speech Emotion Recognition (SER) บนชุดข้อมูล THAI SER
 - เตรียม data pipeline ด้วยการใช้ mel spectrogram เป็น feature และใช้ไฟล์เสียงที่ sampling rate 16kHz
@@ -20,13 +20,13 @@ links:
 - จากผลการทดลองได้ weighted accuracy สูงสุดที่ 76.95% และ unweighted accuracy ที่ 76.19%
 - ได้เตรียมไฟล์สำหรับการทำ demo ไหว้ใน github เรียบร้อย
 
-![Preprocessing](images/2021/010/02.png)
+![Preprocessing](/images/2021/010/02.png)
 
 
-![Model Architecture](images/2021/010/03.jpg)
+![Model Architecture](/images/2021/010/03.jpg)
 
 
-![Results](images/2021/010/04.png)
+![Results](/images/2021/010/04.png)
 
 ### แรงจูงใจในการเข้าร่วมโครงการ (จากใบสมัครเข้าร่วมเมื่อ 9 สัปดาห์ที่แล้ว)
 
