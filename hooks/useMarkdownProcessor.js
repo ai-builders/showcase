@@ -66,7 +66,7 @@ const useMarkdownProcessor = (text) => {
           h6: (props) => <Heading as="h6" size="xs" my={6} {...props} />,
           ol: (props) => <OrderedList mb={4} {...props} />,
           ul: (props) => <UnorderedList mb={4} {...props} />,
-          li: (props) => <ListItem {...props} />,
+          li: (props) => <ListItem mb={2} {...props} />,
           p: (props) => <Text as="p" mb={4} {...props} />,
           a: (props) => <Link color="purple.400" {...props} />,
           blockquote: BlockQuote,
