@@ -17,6 +17,8 @@ npm install
 npm run dev
 ```
 
+The site should be available at http://localhost:3000/showcase.
+
 ## Add a showcase
 
 Create a markdown file in `posts/{year}` with the name of `{number}-{title-in-kebab-case}.md`. The most important part in the file is the [Front Matter](https://jekyllrb.com/docs/front-matter/), an example is shown below.
