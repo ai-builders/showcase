@@ -96,7 +96,7 @@ const ShowCase = ({ data }: ShowcaseProps) => {
           title={title}
           builder={builder}
           thumbnail={thumbnail}
-          uri={`/posts/${year}/${id}`}
+          uri={`/${year}/${id}`}
         />
       ))}
     </Grid>
