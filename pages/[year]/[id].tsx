@@ -13,10 +13,10 @@ import type {
   NextPage,
 } from 'next';
 import { FaFacebook, FaGithub, FaPenAlt } from 'react-icons/fa';
-import Layout from '../../../components/layout';
-import SEO from '../../../components/seo';
-import useMarkdownProcessor from '../../../hooks/useMarkdownProcessor';
-import { getAllPostIds, getPostData, PostData } from '../../../lib/posts';
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
+import useMarkdownProcessor from '../../hooks/useMarkdownProcessor';
+import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
 
 const buttonMap: { [index: string]: any } = {
   github: {
