@@ -29,7 +29,7 @@ const Home = ({
   postList,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const router = useRouter();
-  const years = Object.keys(postList);
+  const years = Object.keys(postList).reverse();
 
   const [tabIndex, setTabIndex] = useState(
     router.query?.year ? years.indexOf(router.query.year as string) : 0
