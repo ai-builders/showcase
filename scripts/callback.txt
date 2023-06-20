@@ -1,0 +1,10 @@
+Callback History
+
+20/06/2023 11:15:17
+
+Total Tokens used: 14086
+    Prompt Tokens: 11853
+    Completion Tokens: 2233
+Cost (USD): $0.042258000000000004
+
+----------------------------------------
