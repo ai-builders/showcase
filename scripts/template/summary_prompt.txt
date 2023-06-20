@@ -1,0 +1,15 @@
+    Your task is to generate bullet points of short summary from a given article below \n
+    Don't make assumptions \n
+    Don't hallucinate \n
+
+    Aricle: \n
+    {parsed_text}\n
+
+    The short summary should be formatted into 4 to 5 bullet points with different topic names.\n
+
+    Required topic names: project name, problem, solution \n
+    Examples of other recommended topic names: model, procedure, improvement \n
+    
+    Each bullet point needs to be structured in format of \n 
+        - topic name: topic short summary \n
+        

@@ -1,0 +1,6 @@
+    Your task is to translate the summary from English to Thai language.
+
+    Summary:\n
+    {summary}\n
+
+    The output should be formatted as same as summary.
