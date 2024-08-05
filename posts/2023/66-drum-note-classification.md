@@ -5,9 +5,9 @@
     builder_info: "มัธยมศึกษาปีที่ 5 -- กรุงเทพมหานคร"
     thumbnail: "/images/2023/66/01.jpg"
     links:
-    github: "https://github.com/Patriciadesu/Drum-Note-Classification/tree/main"
-    facebook: "https://www.facebook.com/aibuildersx/posts/pfbid0ViXf3mbcLRtAuxnvpUVkPeN1ELai64oep5eSwNED5nojpjivs7GBKrvWD9FYxMXbl"
-    blog: "https://medium.com/@kodthepnaja/drum-notes-classification-bcd13e34b90f"
+        github: "https://github.com/Patriciadesu/Drum-Note-Classification/tree/main"
+        facebook: "https://www.facebook.com/aibuildersx/posts/pfbid0ViXf3mbcLRtAuxnvpUVkPeN1ELai64oep5eSwNED5nojpjivs7GBKrvWD9FYxMXbl"
+        blog: "https://medium.com/@kodthepnaja/drum-notes-classification-bcd13e34b90f"
 ---
 
 ![image](/images/2023/66/01.jpg)
