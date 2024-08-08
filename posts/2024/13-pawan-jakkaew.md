@@ -1,6 +1,6 @@
 ---
 date: "31-7-24"
-title: "Ocular Disease Intelligent Recognition (ODIR)"
+title: "Ocular Disease Intelligent Recognition (ODIR)13"
 builder: "ปวรรณ จักรแก้ว(แตงโม)"
 builder_info: "สตรีวิทยา / กรุงเทพมหานคร"
 thumbnail: "/images/2024/13/01.jpg"
