@@ -6,7 +6,6 @@ builder_info: "เตรียมอุดมศึกษาพัฒนาก�
 thumbnail: "/images/2024/1/01.jpg"
 links:
 	github: "https://github.com/ccs3312/chml/tree/main"
-	facebook: ""
 	blog: "https://medium.com/@moodaeng911/color-harmony-finder-ai-ด้วย-fastai-90ecc303961e"
 ---
 
