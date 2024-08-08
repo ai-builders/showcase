@@ -3,7 +3,7 @@
     title: "Object detection for CCTV with traffic"
     builder: "Kontuch Suksawat"
     builder_info: "มัธยมศึกษาปีที่ 5.0 -- สงขลา"
-    thumbnail: "/images/2023/111/01.jpg"
+    thumbnail: "/images/2023/111/01.png"
     links:
         github: "https://github.com/Fishcanwalk/object-detection-for-CCTV-with-traffic"
         facebook: "https://www.facebook.com/aibuildersx/posts/pfbid02hf2fwfUMhKkYpAAMVJ8bjwC3LRZezCvKsMzkTg2vuWKJmiB53YxMBp7LCEhF5AcMl"
