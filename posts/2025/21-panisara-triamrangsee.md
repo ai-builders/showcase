@@ -1,0 +1,21 @@
+---
+date: "10-6-25"
+title: "Dti_Prediction"
+builder: "Panisara Triamrangsee"
+builder_info: "-"
+thumbnail: "/images/2025/21/01.png"
+links:
+    github: "https://github.com/Panisara06625/DTI_Prediction/tree/main"
+    facebook: ""
+    blog: "https://medium.com/@panisara06625/off-target-binding-prediction-bc2ca2a0494f"
+---
+
+![image](/images/2025/21/01.png)
+
+- โมเลกุลของยาอาจจับกับโปรตีนอื่น (off-target protein) ที่ไม่ใช่เป้าหมายได้ ซึ่งการจับเหล่านี้อาจเป็นสาเหตุของผลข้างเคียงได้
+- Off-target Binding Prediction คือโครงงานที่ช่วยประเมินความเสี่ยงของยาใหม่ก่อนเข้าสู่การทดลองในมนุษย์หรือสัตว์ เพื่อลดต้นทุนและระยะเวลาที่ใช้ในการทดลอง
+- โครงงานนี้ใช้ ข้อมูล SMILES (โครงสร้างของยา) และ ลำดับกรดอะมิโนของโปรตีน (Protein Sequence) จาก Kaggle และ PLDOCK ในการทำนายค่า Kd ซึ่งแสดงถึงความสามารถในการจับระหว่างยาและโปรตีน
+- extract ค่า descriptor จาก SMILES & Protein เพื่อใช้สำหรับ Tabular models
+- ทดลอง train โมเดลด้วย Machine Learning models หลากหลายรูปแบบ ทั้ง CNN, GNN, Regression และ Ensemble เพื่อหา architecture ที่มีประสิทธิภาพสูงสุด
+- โมเดลที่ดีที่สุดได้ค่า Mean Squared Error (MSE) ประมาณ 0.7 และวิเคราะห์ข้อผิดพลาด (Error Analysis) โดยการตรวจสอบ substructure ของยาและโปรตีนที่ทำนายผิด
+- นำผลลัพธ์มาแสดงผ่าน Streamlit web application ที่สามารถป้อนโครงสร้างยาเพื่อทำนายค่า Kd ของการจับกับ list protein

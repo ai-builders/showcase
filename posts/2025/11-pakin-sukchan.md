@@ -1,0 +1,21 @@
+---
+date: "10-6-25"
+title: "AI Code Detector For Competitive Programming"
+builder: "Pakin Sukchan"
+builder_info: "-"
+thumbnail: "/images/2025/11/01.png"
+links:
+    github: "https://github.com/a0ms1n/AI-Code-Detector-for-Competitive-Programming"
+    facebook: ""
+    blog: "https://medium.com/@pakinsukchan/ai-code-detector-for-competitive-programming-e6e8ecb275f7"
+---
+
+![image](/images/2025/11/01.png)
+
+- โมเดลสำหรับจำเเนกโค้ดภาษา C++ ในการเเข่งขัน Competitive Programming ว่า AI หรือมนุษย์ที่เป็นคนเขียน
+- เทรนโดยใช้ source code ภาษา C++ ที่เขียนโดยมนุษย์ทั้งหมด 54,467 source code โดยได้จาก dataset ใน Kaggle เเละจากการ scrape จากเว็บ programming.in.th เเละ grader.gchan.moe
+- เเละเทรนโดยใช้ source code ที่เขียนโดย AI อีกทั้งหมด 54,467 source code โดยได้จาก dataset ใน Huggingface เเละจากการสร้าง source code ด้วย Gemini-2.0-flash , DeepSeek-V3 เเละ DeepSeek-R1
+- โมเดลใช้การ fine-tune จากโมเดล neulab/codebert-cpp ซึ่ง fine-tune มาจากโมเดล CodeBERT ด้วยโค้ดภาษา C++ อีกที
+- โมเดลเทรนโดยใช้ library huggingface/transformers
+- หลังจากทดสอบโมเดลในครั้งเเรก ก็ได้พบจุดอ่อนของโมเดล โดยผู้ใช้สามารถนำโค้ดที่เขียนโดย AI มาปรับเเก้เพียงเล็กน้อย เช่น การเพิ่มบรรทัด , การเพิ่ม comment เเล้วสามารถหลอกโมเดลได้ จึงได้มีการทำ dataset ใหม่ให้ยากมากขึ้น เช่น มีการเพิ่ม บรรทัด/comment เเบบสุ่ม เเละทำการ preprocess source code ก่อนนำเข้าโมเดล เช่น การลบบรรทัดว่าง, การลบ comment, การลบช่องว่าง, การ format code ฯลฯ
+- หลังจากเทรนโมเดลใหม่อีกหลายครั้ง พบว่าการนำผลที่ได้จากโมเดลที่เทรนโดยโค้ดที่ format เเล้ว เเละโมเดลที่เทรนโดยโค้ด ที่มีการลบบรรทัด, ลบ comment โดยไม่ได้ format code มาหาค่าเฉลี่ยเเล้วทายผลลัพธ์ ให้ผลลัพธ์ที่มีความเเม่นยำมากที่สุด โดย accuracy ของ test set ธรรมดา เเละ test set หลังเพิ่มความยากอยู่ที่ 98% เเละ 83% ตามลำดับ

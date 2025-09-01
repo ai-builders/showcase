@@ -1,0 +1,18 @@
+---
+date: "10-6-25"
+title: "Aib5 Mgce.AI"
+builder: "Ryutara Kiedcharoensiri"
+builder_info: "-"
+thumbnail: "/images/2025/20/01.png"
+links:
+    github: "https://github.com/himeairi/AIB5-mGCE.AI"
+    facebook: ""
+    blog: "https://medium.com/@ryutarakiedcharoensiri/mgce-ai-part-i-6f93500cf0b8"
+---
+
+![image](/images/2025/20/01.png)
+
+- A vast amount of valuable scientific knowledge is locked away in images of graphs within old research papers and textbooks, making it inaccessible for modern computers to analyze. To unlock this data for new discoveries, we are building a tool to automate its extraction.
+- This project focuses on the critical first step: reliably converting the graph image into structured data. We are creating a high-precision pipeline that solves this "image-to-data" problem.
+- To do this, we generated a unique dataset of thousands of graph images, including waves, lines, and curves, to train our system. We then developed a sophisticated AI model using a Vision Transformer (to see the image) and an LSTM network (to trace the coordinates).
+- The final model serves as a powerful engine in a larger analysis pipeline. It takes a graph image as input and produces a clean, accurate file of data points, making the data ready for any subsequent scientific analysis, like finding slopes or peaks.

@@ -1,0 +1,20 @@
+---
+date: "2023-12-31"
+title: "FakeRev: Detecting Computer-Generated Reviews with fine-tuned BERT-based models"
+builder: "Luka Chanakan Bond"
+builder_info: "มัธยมศึกษาปีที่ 6 / เชียงใหม่ / rising-stags"
+thumbnail: "/images/00/01.png"
+links:
+    github: "https://github.com/LukaBondi/fake_review/tree/master"
+    facebook: ""
+    blog: "https://medium.com/@lukabond06/fakerev-detecting-computer-generated-reviews-with-fine-tuned-bert-based-models-82fb42a0be0d"
+---
+
+![image](/images/00/01.png)
+
+- งานจำแนก **รีวิวปลอมที่สร้างโดยคอมพิวเตอร์** ด้วยการปรับจูนโมเดลตระกูล **BERT** บนชุดข้อมูลรีวิวข้อความ
+- เปรียบเทียบเวอร์ชัน fine-tuned และตั้งค่าเพื่อปรับปรุงความแม่นยำในการตรวจจับ
+     
+ทดลองใช้ได้ที่: https://colab.research.google.com/drive/1YRfSakWf9YjsYE0s4Wd9u3Cs6hhZZSi5?usp=sharing  
+อ่านรายละเอียดเพิ่มเติม: https://medium.com/@lukabond06/fakerev-detecting-computer-generated-reviews-with-fine-tuned-bert-based-models-82fb42a0be0d  
+GitHub repository: https://github.com/LukaBondi/fake_review/tree/master

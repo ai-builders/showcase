@@ -1,0 +1,19 @@
+---
+date: "10-6-25"
+title: "14 Day Stock Prediction Model"
+builder: "Thitat Vorachitsanti"
+builder_info: "-"
+thumbnail: "/images/2025/7/01.png"
+links:
+    github: "https://github.com/tymeee/14-day-stock-prediction-model"
+    facebook: ""
+    blog: "https://medium.com/@tymee18/predicting-how-much-a-stock-within-the-s-p500-would-grow-in-14-trading-days-d4f697b66ebd"
+---
+
+![image](/images/2025/7/01.png)
+
+- In our current world, there has been an uprising trend of people that have begun to become interested in investing in stocks. Despite the plethora of tutorials and youtube videos teaching people how to invest wisely, people still struggle and fail to make proper returns from investing due to the complexity of the the stock market.
+- To try to help people have an easier ride when investing, I have built an AI Model that tries to predict how much a stock within the S&P 500 would grow.
+- The first step to the project is vital to the success of the model: having good data for the model to train on. We extracted OPHCV data of all the stocks in the S&P500. However, OPCHV data alone is not enough, therefore, I calculated another 30 additional technical indicators as well.
+- Moving on, I trained and developed two diffirent models: an LSTM model wrapped in a fast-ai learner and a XG-Boost model. Both were then tested on profitability and compared with a simple strategy and the mean returns of actual traders.
+- The results of the model were not perfect, however, I believe that the models prediction could still be an important asset when developing a proper trading strategy.
