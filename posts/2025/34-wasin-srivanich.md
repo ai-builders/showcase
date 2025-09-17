@@ -1,7 +1,7 @@
 ---
 date: "11-6-25"
 title: "Fix Typo "
-builder: "Wasin Srivanich"
+builder: "Wasin Sriwanichyaporn"
 builder_info: "-"
 thumbnail: "/images/2025/34/01.png"
 links:
